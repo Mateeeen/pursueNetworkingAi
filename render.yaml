@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: fastapi-render
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port 10000"
+    envVars:
+      - key: DB_HOST
+        value: srv1005.hstgr.io
+      - key: DB_PORT
+        value: 3306
+      - key: DB_NAME
+        value: u655074677_staging_base
+      - key: DB_USER
+        value: u655074677_staging_base
+      - key: DB_PASSWORD
+        value: Pursuenetworking2
